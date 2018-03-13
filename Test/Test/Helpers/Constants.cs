@@ -2,7 +2,11 @@
 {
     public static class Constants
     {
-        public static string Username = "xamarin";
-        public static string Password = "dbalab";
+        public static bool EnvironmentSelector = true;
+
+        //KEYS
+
+        public const string USER_KEY = "USER_KEY";
+
     }
 }
