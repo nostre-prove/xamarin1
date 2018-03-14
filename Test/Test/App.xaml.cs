@@ -25,7 +25,7 @@ namespace Test
 		protected override void OnStart ()
 		{
             // Handle when your app starts
-            AppCenter.Start("android=0b76f381-381f-42ad-9a13-fe64ca21fe41;ios=9ba7c884-fb25-468b-9c17-a7a288d5decb;", 
+            AppCenter.Start("android=b3c120a0-5a9b-4f2f-863b-3546e0ba8e17;ios=77ed2365-e5d9-4b98-a110-105176cbf376;", 
                 typeof(Analytics), typeof(Crashes));
 
             if (Application.Current.Properties.ContainsKey(Constants.USER_KEY)) {

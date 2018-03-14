@@ -55,7 +55,7 @@
                 <Label Text="Login" FontSize="30" Style="{StaticResource labelStyle}" Grid.Row="0" Grid.Column="0"/>
                 <Entry x:Name="usernameEntry" Placeholder="Username" Style="{StaticResource inputStyle}" Grid.Row="1" Grid.Column="0"/>
                 <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Password" Style="{StaticResource inputStyle}" Grid.Row="2" Grid.Column="0"/>
-                <Picker Title="Seleziona ambiente" Style="{StaticResource pickerStyle}" Grid.Row="3" Grid.Column="0">
+                <Picker IsVisible="{Binding IsEnvironmentPickerAvailable}" Title="Seleziona ambiente" Style="{StaticResource pickerStyle}" Grid.Row="3" Grid.Column="0">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Sviluppo</x:String>

@@ -1,5 +1,6 @@
 ﻿using System;
 using Test.Helpers;
+using Test.ViewModels;
 using Xamarin.Forms;
 
 namespace Test.Pages
@@ -9,6 +10,7 @@ namespace Test.Pages
         public LoginPage ()
 		{
             InitializeComponent();
+            BindingContext = new LoginViewModel();
         }
 
         async void OnLoginButtonClicked(object sender, EventArgs e)
