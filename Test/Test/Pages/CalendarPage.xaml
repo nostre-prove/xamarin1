@@ -4,9 +4,7 @@
              x:Class="Test.Pages.CalendarPage" BackgroundColor="#2D81B8">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Calendar Page" TextColor="White" FontSize="Medium"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Calendar Page" TextColor="White" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

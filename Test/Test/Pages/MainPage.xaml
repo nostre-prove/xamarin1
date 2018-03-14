@@ -4,11 +4,24 @@
              x:Class="Test.Pages.MainPage" NavigationPage.HasNavigationBar="False">
     <MasterDetailPage.Master>
         <ContentPage Title="Master" BackgroundColor="#1F9BE3">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="buttonStyle" TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="#1F9BE3"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="FontFamily" Value="Droid Sans Mono" />
+                        <Setter Property="FontSize" Value="Medium" />
+                        <Setter Property="HeightRequest" Value="70" />
+                        <Setter Property="Margin" Value="0,10,0,0" />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            
             <ContentPage.Content>
                 <StackLayout Padding="5,30,5,5">
-                    <Button Text="Calendar" Clicked="OnClicked_Calendar"></Button>
-                    <Button Text="About" Clicked="OnClicked_About"></Button>
-                    <Button Text="Logout" Clicked="OnClicked_Logout"></Button>
+                    <Button Text="Calendar" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Calendar"></Button>
+                    <Button Text="About" Style="{StaticResource buttonStyle}" Clicked="OnClicked_About"></Button>
+                    <Button Text="Logout" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Logout"></Button>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>
