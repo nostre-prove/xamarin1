@@ -90,7 +90,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="TestDependency.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +130,12 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.4.13</Version>
+    </PackageReference>
+    <PackageReference Include="NLog.Config">
+      <Version>4.4.13</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>

@@ -11,6 +11,10 @@ namespace Test.Pages
 		{
             InitializeComponent();
             BindingContext = new LoginViewModel();
+            DependencyService.Get<ILogging>().Info("Login", "mymessage");
+            DependencyService.Get<ILogging>().Warn("Login", "mymessage");
+            DependencyService.Get<ILogging>().Debug("Login", "mymessage");
+            DependencyService.Get<ILogging>().Error("Login", "mymessage");
         }
 
         async void OnLoginButtonClicked(object sender, EventArgs e)

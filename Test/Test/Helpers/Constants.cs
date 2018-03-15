@@ -2,11 +2,11 @@
 {
     public static class Constants
     {
-        public static bool EnvironmentSelector = true;
+        // controls flag
+        public const bool EnvironmentSelector = true;
+        public const bool ANALYTICS_ACTIVE = true;
 
-        //KEYS
-
+        // keys
         public const string USER_KEY = "USER_KEY";
-
     }
 }

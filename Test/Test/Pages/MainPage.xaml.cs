@@ -13,8 +13,7 @@ namespace Test.Pages
 	{
         public MainPage ()
 		{
-			InitializeComponent ();
-            // DependencyService.Get<IMyTest>().Speak("Hi");
+			InitializeComponent ();            
             IsPresented = false;
             MasterBehavior = MasterBehavior.Popover;
             Detail = new NavigationPage(new CalendarPage());
@@ -42,11 +41,8 @@ namespace Test.Pages
         async void OnClicked_Logout(object sender, EventArgs e)
         {
             App.IsUserLoggedIn = false;
-            // Detail = new LoginPage();
-            // IsPresented = false;
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
-            // Navigation.PushAsync(new LoginPage());
         }
     }
 }
