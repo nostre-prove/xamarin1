@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Test.Helpers;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Test.Pages
 {
-	public partial class MainPage : MasterDetailPage
+    public partial class MainPage : MasterDetailPage
 	{
         public MainPage ()
 		{
@@ -41,6 +36,8 @@ namespace Test.Pages
         async void OnClicked_Logout(object sender, EventArgs e)
         {
             App.IsUserLoggedIn = false;
+            Application.Current.Properties.Remove(Constants.USER_KEY);
+            AnalyticsHelper.send("Logout", "Return to Login");
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
         }

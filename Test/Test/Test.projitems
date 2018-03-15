@@ -16,6 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AnalyticsHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Login.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILogging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />

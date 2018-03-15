@@ -20,13 +20,6 @@ namespace Test.Droid
         {
             var now = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.fff");           
             Log.Info("xamarin_info", String.Format("{0} - {1} - {2}", now, sender, message));
-            // Log.Info("xamarin-info", message);
-            //  var folder = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-
-            // bool exists = Directory.Exists(folder);
-            // Log.Info("aaa", exists.ToString());
-            //  var filePath = Path.Combine(folder, "dom/log.txt");
-            //  File.AppendAllText(filePath, "\n" + message);
         }
 
         public void Warn(string sender, string message)

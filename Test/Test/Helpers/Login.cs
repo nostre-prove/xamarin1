@@ -8,7 +8,6 @@ namespace Test.Helpers
 {
     static class Login
     {
-        // da mettere in un'altra parte
         public static void AreCredentialsCorrect(string username, string password)
         {
             Application.Current.Properties.Remove(Constants.USER_KEY);
