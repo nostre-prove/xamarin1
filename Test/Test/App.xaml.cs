@@ -10,27 +10,29 @@ namespace Test
 
 		public App ()
 		{
-            AnalyticsHelper.start();
-            setMainPage();
+            AnalyticsHelper.Start();
+            SetMainPage();
         }
 
 		protected override void OnStart ()
 		{
-            AnalyticsHelper.send("App", "Start application");
+            AnalyticsHelper.Send("App", "Start application");
         }
 
 		protected override void OnSleep ()
 		{
-            AnalyticsHelper.send("App", "OnSleep application");
+            AnalyticsHelper.Send("App", "OnSleep application");
         }
 
 		protected override void OnResume ()
 		{
-            AnalyticsHelper.send("App", "OnResume application");
+            AnalyticsHelper.Send("App", "OnResume application");
         }
 
-        private void setMainPage()
+        private void SetMainPage()
         {
+            // MainPage = new NavigationPage(new SplashPage());
+            
             if (!IsUserLoggedIn)
             {
                 MainPage = new NavigationPage(new LoginPage());
@@ -39,6 +41,7 @@ namespace Test
             {
                 MainPage = new NavigationPage(new MainPage());
             }
+            
         }
 	}
 }

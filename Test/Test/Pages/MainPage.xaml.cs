@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 namespace Test.Pages
 {
+    // [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
 	{
         public MainPage ()
@@ -37,7 +38,7 @@ namespace Test.Pages
         {
             App.IsUserLoggedIn = false;
             Application.Current.Properties.Remove(Constants.USER_KEY);
-            AnalyticsHelper.send("Logout", "Return to Login");
+            AnalyticsHelper.Send("Logout", "Return to Login");
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
         }

@@ -4,13 +4,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Test.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    // [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CalendarPage : ContentPage
 	{
 		public CalendarPage()
 		{
 			InitializeComponent ();
-            AnalyticsHelper.send("Calendar", "Enter in Calendar section");
+            AnalyticsHelper.Send("Calendar", "Enter in Calendar section");
         }
     }
 }

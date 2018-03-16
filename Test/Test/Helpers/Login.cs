@@ -13,10 +13,12 @@ namespace Test.Helpers
             Application.Current.Properties.Remove(Constants.USER_KEY);
             if (username == "abc" && password == "123")
             {
-                User loginUser = new User();
-                loginUser.Password = password;
-                loginUser.Username = username;
-                loginUser.UserID = "1234";
+                User loginUser = new User()
+                {
+                    Password = password,
+                    Username = username,
+                    UserID = "1234"
+                };
                 Application.Current.Properties.Add(Constants.USER_KEY, loginUser);
             }
         }

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Test",
+    "\\Test\\Test",
     "\\Test\\Test.Android"
   ],
-  "SelectedNode": "\\Test.sln",
+  "SelectedNode": "\\Test\\Test.Android\\LoggingDependency.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -8,14 +8,15 @@ namespace Test.Helpers
 {
     static class AnalyticsHelper
     {
-        public static void start()
+        public static void Start()
         {
             AppCenter.Start(String.Format("android={0};ios={1};", Constants.ANALYTICS_KEY_ANDROID, Constants.ANALYTICS_KEY_IOS),
                 typeof(Analytics), typeof(Crashes));
         }
 
-        public static void send(string sender, string message)
+        public static void Send(string sender, string message)
         {
+            // TODO: change output
             if (Application.Current.Properties.ContainsKey(Constants.USER_KEY) && 1==0)
             {                
                 Models.User userlogged = Application.Current.Properties[Constants.USER_KEY] as Models.User;

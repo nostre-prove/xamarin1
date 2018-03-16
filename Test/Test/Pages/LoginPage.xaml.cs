@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace Test.Pages
 {
+    // [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
 	{
         public LoginPage ()
