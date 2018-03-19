@@ -21,6 +21,7 @@
             <ContentPage.Content>
                 <StackLayout Padding="5,30,5,5">
                     <Button Text="Calendar" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Calendar"></Button>
+                    <Button Text="Post" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Post"></Button>
                     <Button Text="About" Style="{StaticResource buttonStyle}" Clicked="OnClicked_About"></Button>
                     <Button Text="Logout" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Logout"></Button>
                 </StackLayout>

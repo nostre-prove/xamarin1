@@ -31,8 +31,6 @@ namespace Test
 
         private void SetMainPage()
         {
-            // MainPage = new NavigationPage(new SplashPage());
-            
             if (!IsUserLoggedIn)
             {
                 MainPage = new NavigationPage(new LoginPage());

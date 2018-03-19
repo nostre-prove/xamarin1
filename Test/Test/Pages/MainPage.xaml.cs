@@ -1,10 +1,11 @@
 ﻿using System;
 using Test.Helpers;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Test.Pages
 {
-    // [XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
 	{
         public MainPage ()
@@ -15,16 +16,15 @@ namespace Test.Pages
             Detail = new NavigationPage(new CalendarPage());
         }
 
-        async void OnLogoutButtonClicked(object sender, EventArgs e)
-        {
-            App.IsUserLoggedIn = false;
-            Navigation.InsertPageBefore(new LoginPage(), this);
-            await Navigation.PopAsync();
-        }
-
         private void OnClicked_Calendar(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new CalendarPage());
+            IsPresented = false;
+        }
+
+        private void OnClicked_Post(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new PostPage());
             IsPresented = false;
         }
 
