@@ -6,6 +6,13 @@
         <ContentPage Title="Master" BackgroundColor="#1F9BE3">
             <ContentPage.Resources>
                 <ResourceDictionary>
+                    <Style x:Key="labelStyle" TargetType="Label">
+                        <Setter Property="FontSize" Value="Small" />
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                        <Setter Property="FontFamily" Value="Droid Sans Mono" />
+                        <Setter Property="Margin" Value="0,10,0,10" />
+                    </Style>
                     <Style x:Key="buttonStyle" TargetType="Button">
                         <Setter Property="BackgroundColor" Value="#1F9BE3"/>
                         <Setter Property="BorderWidth" Value="0"/>
@@ -20,6 +27,7 @@
             
             <ContentPage.Content>
                 <StackLayout Padding="5,30,5,5">
+                    <Label x:Name="LabelMenuText" Style="{StaticResource labelStyle}" />
                     <Button Text="Calendar" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Calendar"></Button>
                     <Button Text="Post" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Post"></Button>
                     <Button Text="About" Style="{StaticResource buttonStyle}" Clicked="OnClicked_About"></Button>

@@ -17,10 +17,10 @@ namespace Test.Helpers
         public static void Send(string sender, string message)
         {
             // TODO: change output
-            if (Application.Current.Properties.ContainsKey(Constants.USER_KEY) && 1==0)
+            if (Application.Current.Properties.ContainsKey(Constants.USER_NAME) && 1==0)
             {                
-                Models.User userlogged = Application.Current.Properties[Constants.USER_KEY] as Models.User;
-                Analytics.TrackEvent(String.Format("User ID: {0} - {1} - {2}", userlogged.UserID, sender, message));
+                var username = Application.Current.Properties[Constants.USER_NAME];
+                Analytics.TrackEvent(String.Format("Username: {0} - {1} - {2}", username, sender, message));
             }
             else
             {

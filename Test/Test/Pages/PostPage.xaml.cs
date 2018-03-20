@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Test.Helpers;
 using Test.Models;
+using Test.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +16,6 @@ namespace Test.Pages
 	public partial class PostPage : ContentPage
 	{
         private const string url = "http://jsonplaceholder.typicode.com/posts";
-        private HttpClient httpClient = new HttpClient();
         private ObservableCollection<Post> postsObservable;
 
         public PostPage ()
@@ -27,7 +28,7 @@ namespace Test.Pages
         {
             try
             {
-                var content = await httpClient.GetStringAsync(url);
+                var content = await RestService.GetRequest(url);
                 var posts = JsonConvert.DeserializeObject<List<Post>>(content);
                 postsObservable = new ObservableCollection<Post>(posts);
                 Posts.ItemsSource = postsObservable;                
@@ -36,6 +37,5 @@ namespace Test.Pages
                 DependencyService.Get<ILogging>().Info("Test.PostPage", ex.ToString());
             }
         }
-        
     }
 }

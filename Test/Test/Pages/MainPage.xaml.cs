@@ -1,5 +1,6 @@
 ﻿using System;
 using Test.Helpers;
+using Test.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +15,12 @@ namespace Test.Pages
             IsPresented = false;
             MasterBehavior = MasterBehavior.Popover;
             Detail = new NavigationPage(new CalendarPage());
+        }
+
+        protected override void OnAppearing()
+        {
+            var username = Application.Current.Properties.ContainsKey(Constants.USER_NAME) ? Application.Current.Properties[Constants.USER_NAME] : "ospite";
+            LabelMenuText.Text = String.Format("Benvenuto, {0}", username);
         }
 
         private void OnClicked_Calendar(object sender, EventArgs e)
@@ -36,9 +43,8 @@ namespace Test.Pages
 
         async void OnClicked_Logout(object sender, EventArgs e)
         {
-            App.IsUserLoggedIn = false;
-            Application.Current.Properties.Remove(Constants.USER_KEY);
             AnalyticsHelper.Send("Logout", "Return to Login");
+            LoginService.RemoveUserInfo();
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
         }

@@ -6,8 +6,6 @@ namespace Test
 {
     public partial class App : Application
 	{
-        public static bool IsUserLoggedIn { get; set; }
-
 		public App ()
 		{
             AnalyticsHelper.Start();
@@ -31,15 +29,14 @@ namespace Test
 
         private void SetMainPage()
         {
-            if (!IsUserLoggedIn)
-            {
-                MainPage = new NavigationPage(new LoginPage());
-            }
-            else
+            if(Application.Current.Properties.ContainsKey(Constants.USER_NAME))
             {
                 MainPage = new NavigationPage(new MainPage());
             }
-            
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
         }
 	}
 }
