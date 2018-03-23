@@ -19,16 +19,6 @@ namespace Test.Pages
 
         protected override void OnAppearing()
         {
-            /*
-            if (Application.Current.Properties.ContainsKey(Constants.USER_NAME))
-            {
-                messageLabel.Text = Application.Current.Properties[Constants.USER_NAME].ToString();
-            } else
-            {
-                messageLabel.Text = "Nessun username presente";
-            }
-            */
-
             var Environments = new List<String>()
             {
                 "Sviluppo",

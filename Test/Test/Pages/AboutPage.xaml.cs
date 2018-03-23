@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Test.Pages
 {
-    // [XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
 	{
 		public AboutPage ()
