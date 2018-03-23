@@ -14,13 +14,19 @@ namespace Test.Pages
 			InitializeComponent ();            
             IsPresented = false;
             MasterBehavior = MasterBehavior.Popover;
-            Detail = new NavigationPage(new CalendarPage());
+            Detail = new NavigationPage(new SiteInspectionPage());
         }
 
         protected override void OnAppearing()
         {
             var username = Application.Current.Properties.ContainsKey(Constants.USER_NAME) ? Application.Current.Properties[Constants.USER_NAME] : "ospite";
             LabelMenuText.Text = String.Format("Benvenuto, {0}", username);
+        }
+
+        private void OnClicked_SiteInspection(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new SiteInspectionPage());
+            IsPresented = false;
         }
 
         private void OnClicked_Calendar(object sender, EventArgs e)

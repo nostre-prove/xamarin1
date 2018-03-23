@@ -29,6 +29,7 @@
                 <ScrollView>
                     <StackLayout Padding="5,30,5,5">
                         <Label x:Name="LabelMenuText" Style="{StaticResource labelStyle}" />
+                        <Button Text="Sopralluoghi" Style="{StaticResource buttonStyle}" Clicked="OnClicked_SiteInspection"></Button>
                         <Button Text="Calendar" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Calendar"></Button>
                         <Button Text="Post" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Post"></Button>
                         <Button Text="About" Style="{StaticResource buttonStyle}" Clicked="OnClicked_About"></Button>
