@@ -19,9 +19,10 @@
     <ContentPage.Content>
 
         <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="Post" TextColor="White" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-
-            <Button Text="Carica dati" Style="{StaticResource buttonStyle}" Clicked="LoadData"></Button>
+            <Label x:Name="countPost" FontSize="Large" TextColor="White"></Label>
+            <Button Text="Aggiungi dati" Style="{StaticResource buttonStyle}" Clicked="LoadDataFromService"></Button>
+            <Button Text="Elimina tutti i dati" Style="{StaticResource buttonStyle}" Clicked="DeleteAllPosts"></Button>
+            <Button Text="Mostra dati locali" Style="{StaticResource buttonStyle}" Clicked="LoadDataInternal"></Button>
 
             <ListView x:Name="Posts">
                 <ListView.ItemTemplate>

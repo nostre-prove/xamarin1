@@ -16,5 +16,6 @@ namespace Test.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+    }
 }

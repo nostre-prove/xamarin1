@@ -17,8 +17,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AnalyticsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILogging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OauthAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SurveyGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SurveyLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Survey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Post.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\AboutPage.xaml.cs">
@@ -45,6 +49,11 @@
       <DependentUpon>PostPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SurveyPage.xaml.cs">
+      <DependentUpon>SurveyPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ItemDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LoginService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RestService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
@@ -84,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SiteInspectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SurveyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

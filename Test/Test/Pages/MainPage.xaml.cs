@@ -29,6 +29,12 @@ namespace Test.Pages
             IsPresented = false;
         }
 
+        private void OnClicked_Survey(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new SurveyPage());
+            IsPresented = false;
+        }
+
         private void OnClicked_Calendar(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new CalendarPage());

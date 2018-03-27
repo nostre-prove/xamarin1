@@ -22,17 +22,56 @@ namespace Test.Pages
 		{
             InitializeComponent();
             AnalyticsHelper.Send("Calendar", "Enter in Calendar section");
+            countPost.Text = "SQLite";
         }
         
-        public async void LoadData(Object sender, EventArgs e)
+        public async void LoadDataFromService(Object sender, EventArgs e)
         {
             try
             {
                 var content = await RestService.GetRequest(url);
                 var posts = JsonConvert.DeserializeObject<List<Post>>(content);
+
+                long timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                foreach(Post post in posts)
+                {
+                    post.Timestamp = timestamp;
+                    Console.WriteLine(JsonConvert.SerializeObject(post));
+                    await App.Database.SaveItemAsync(post);
+                }
+            } catch (Exception ex)
+            {
+                DependencyService.Get<ILogging>().Info("Test.PostPage", ex.ToString());
+            }
+        }
+
+        public async void LoadDataInternal(Object sender, EventArgs e)
+        {
+            try
+            {
+                var posts = await App.Database.GetItemsAsync();
+                countPost.Text = "SQLite - Totale post salvati: " + posts.Count.ToString();
+                Console.WriteLine("Count: " + posts.Count);
                 postsObservable = new ObservableCollection<Post>(posts);
                 Posts.ItemsSource = postsObservable;                
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                DependencyService.Get<ILogging>().Info("Test.PostPage", ex.ToString());
+            }
+        }
+
+        public async void DeleteAllPosts(Object sender, EventArgs e)
+        {
+            try
+            {
+                var posts = await App.Database.GetItemsAsync();
+                foreach(Post post in posts)
+                {
+                    await App.Database.DeleteItemAsync(post);
+                }
+            }
+            catch (Exception ex)
             {
                 DependencyService.Get<ILogging>().Info("Test.PostPage", ex.ToString());
             }
