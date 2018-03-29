@@ -17,6 +17,7 @@ namespace Test.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            RequestedOrientation = ScreenOrientation.Landscape;
 
             base.OnCreate(bundle);
             

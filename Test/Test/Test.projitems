@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AnalyticsHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILogging.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OauthAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SurveyGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SurveyLookup.cs" />
