@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
-             x:Class="Test.Pages.MainPage" NavigationPage.HasNavigationBar="False">
+             x:Class="Test.Pages.MainPage" NavigationPage.HasNavigationBar="False" BackgroundColor="#1F9BE3">
     <MasterDetailPage.Master>
-        <ContentPage Title="Master" BackgroundColor="#1F9BE3">
+  
+
+        <ContentPage Title="Master" BackgroundColor="#FE6E37">
+
             <ContentPage.Resources>
                 <ResourceDictionary>
                     <Style x:Key="labelStyle" TargetType="Label">
@@ -14,13 +17,14 @@
                         <Setter Property="Margin" Value="0,10,0,10" />
                     </Style>
                     <Style x:Key="buttonStyle" TargetType="Button">
-                        <Setter Property="BackgroundColor" Value="#1F9BE3"/>
+                        <Setter Property="BackgroundColor" Value="Transparent"/>
                         <Setter Property="BorderWidth" Value="0"/>
                         <Setter Property="TextColor" Value="White"/>
                         <Setter Property="FontFamily" Value="Droid Sans Mono" />
-                        <Setter Property="FontSize" Value="Medium" />
-                        <Setter Property="HeightRequest" Value="70" />
+                        <Setter Property="FontSize" Value="15" />
+                        <!--<Setter Property="HeightRequest" Value="50" />-->
                         <Setter Property="Margin" Value="0,10,0,0" />
+                        <Setter Property="HorizontalOptions" Value="Start" />
                     </Style>
                 </ResourceDictionary>
             </ContentPage.Resources>
@@ -28,13 +32,12 @@
             <ContentPage.Content>
                 <ScrollView>
                     <StackLayout Padding="5,30,5,5">
-                        <Label x:Name="LabelMenuText" Style="{StaticResource labelStyle}" />
-                        <Button Text="Sopralluoghi" Style="{StaticResource buttonStyle}" Clicked="OnClicked_SiteInspection"></Button>
+                        <!--<Label x:Name="LabelMenuText" Style="{StaticResource labelStyle}" />-->
+                        <Image Source="MenuLogo.png"/>
+                        <Button Text="Crea nuovo ingaggio" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Engagement"></Button>
                         <Button Text="Questionario" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Survey"></Button>
-                        <Button Text="Calendar" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Calendar"></Button>
                         <Button Text="Post" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Post"></Button>
-                        <Button Text="About" Style="{StaticResource buttonStyle}" Clicked="OnClicked_About"></Button>
-                        <Button Text="Logout" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Logout"></Button>
+                        <!--<Button Text="Logout" Style="{StaticResource buttonStyle}" Clicked="OnClicked_Logout"></Button>-->
                     </StackLayout>
                 </ScrollView>
             </ContentPage.Content>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Test.Pages.SurveyPage" BackgroundColor="#2D81B8">
+             x:Class="Test.Pages.SurveyPage" BackgroundColor="#F4F4F4">
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Check List DL lavori civili  05_028_028060_38000058914_7XXTEST" TextColor="White" FontSize="Medium"
+            <Label Text="Check List DL lavori civili  05_028_028060_38000058914_7XXTEST" FontSize="Medium"
                 HorizontalOptions="CenterAndExpand" />
 
             <Button Clicked="SaveSurvey" Text="Salva Questionario"></Button>
@@ -15,8 +15,8 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding Title}" TextColor="White" FontSize="Large" HeightRequest="50"></Label>
-                                <Label Text="Descrizione" IsVisible="{Binding IsVisible}" FontSize="Medium" TextColor="WhiteSmoke"></Label>
+                                <Label Text="{Binding Title}" FontSize="Large" HeightRequest="50"></Label>
+                                <Label Text="Descrizione" IsVisible="{Binding IsVisible}" FontSize="Medium"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

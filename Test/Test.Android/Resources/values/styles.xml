@@ -14,21 +14,35 @@
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#2196F3</item>
+    <item name="colorPrimary">#FFFFFF</item>
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="colorPrimaryDark">#FE6E37</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!-- <item name="colorAccent">#FF4081</item>-->
-    <item name="colorAccent">#1F9BE3</item>
+    <item name="colorAccent">#FE6E37</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
+    
+    <item name="textAllCaps">false</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  
+    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
   </style>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
+  </style>
+
+  <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+    <item name="spinBars">true</item>
+    <item name="color">#FE6E37</item>
+  </style>
+
+  <style name="AppToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:colorBackground">#FF0000</item>
+    <item name="android:textColor">#000080</item>
   </style>
 </resources>

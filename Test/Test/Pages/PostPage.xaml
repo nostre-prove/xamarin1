@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Test.Pages.PostPage" BackgroundColor="#2D81B8">
+             x:Class="Test.Pages.PostPage" BackgroundColor="#F4F4F4">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
@@ -19,7 +19,7 @@
     <ContentPage.Content>
 
         <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-            <Label x:Name="countPost" FontSize="Large" TextColor="White"></Label>
+            <Label x:Name="countPost" FontSize="Large"></Label>
             <Button Text="Aggiungi dati" Style="{StaticResource buttonStyle}" Clicked="LoadDataFromService"></Button>
             <Button Text="Elimina tutti i dati" Style="{StaticResource buttonStyle}" Clicked="DeleteAllPosts"></Button>
             <Button Text="Mostra dati locali" Style="{StaticResource buttonStyle}" Clicked="LoadDataInternal"></Button>
