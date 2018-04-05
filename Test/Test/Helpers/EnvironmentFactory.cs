@@ -1,17 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Test.Interfaces;
+using Xamarin.Forms;
 
 namespace Test.Helpers
 {
     class EnvironmentFactory
     {
-        public static IEnvironment getInstance()
+        public static IEnvironment GetInstance()
         {
-            if (1 == 0)
-                return new OpenFiberTestEnv();
-            else
-                return new OpenFiberProdEnv();
+            IEnvironment client = null;
+            if (Application.Current.Properties.ContainsKey(Constants.SITE_ID))
+            {
+                switch (Application.Current.Properties[Constants.SITE_ID] as string)
+                {
+                    case "OpenFiberProdEnv":
+                        client = new OpenFiberProdEnv();
+                        break;
+                    case "OpenFiberTestEnv":
+                        client = new OpenFiberTestEnv();
+                        break;
+                }
+            }
+            return client;
         }
     }
 }

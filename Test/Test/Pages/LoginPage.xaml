@@ -23,12 +23,11 @@
                 <Setter Property="TextColor" Value="Gray" />
             </Style>
             
-            <!--
             <Style x:Key="pickerStyle" TargetType="Label">
                 <Setter Property="BackgroundColor" Value="White" />
                 <Setter Property="TextColor" Value="Gray" />
             </Style>
-            -->
+            
             <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#FE6E37"/>
                 <Setter Property="TextColor" Value="White"/>
@@ -91,15 +90,12 @@
                             <ActivityIndicator x:Name="indicatorLoader" IsRunning="false" VerticalOptions="Center" HorizontalOptions="Center"  Color="Red" Grid.Row="0" Grid.Column="0"/>
                             <Button x:Name="buttonLogin" WidthRequest="100" HeightRequest="50" Text="START" Style="{StaticResource buttonStyle}" Clicked="OnLoginButtonClicked" Grid.Row="0" Grid.Column="1"/>
                         </Grid>
-                        <!--
-                    <Picker x:Name="myPicker" SelectedIndexChanged="OnPickerSelectedIndexChanged" ItemsSource="Environments" IsVisible="{Binding IsEnvironmentPickerAvailable}" Title="Seleziona ambiente" Style="{StaticResource pickerStyle}">
-                    </Picker>
--->
+                       
                         <Label x:Name="messageLabel" FontSize="Medium" Style="{StaticResource labelTitle}" TextColor="Red" Grid.Row="5" Grid.Column="1"/>
-                        <!--
-                    <Label x:Name="messageEnvironment" FontSize="Medium" Style="{StaticResource labelStyle}"/>
-                    -->
                         <Button Text="Test - Accedi subito" Style="{StaticResource buttonStyle}" Clicked="OnQuickAccessButtonClicked" Grid.Row="6" Grid.Column="1"/>
+                        
+                        <Picker Grid.Row="7" Grid.Column="1" x:Name="PickerEnvironment" SelectedIndexChanged="OnPickerEnvironmentChanged" ItemsSource="Environments" IsVisible="{Binding IsEnvironmentPickerAvailable}" Title="Seleziona ambiente" Style="{StaticResource pickerStyle}">
+                        </Picker>
                     </Grid>
                 </StackLayout>
             </Grid>

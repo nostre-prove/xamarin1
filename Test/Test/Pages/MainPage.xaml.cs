@@ -18,7 +18,6 @@ namespace Test.Pages
             Detail = new NavigationPage(new EngagementPage())
             {
                 BarBackgroundColor = Color.FromHex("#FFFFFF"),
-                // BarTextColor = Color.FromHex("#FF0000")
             };
         }
 

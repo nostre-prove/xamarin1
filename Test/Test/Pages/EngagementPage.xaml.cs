@@ -1,21 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Test.Helpers;
+using Test.Interfaces;
 using Test.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Test.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EngagementPage : ContentPage
 	{
-		public EngagementPage()
+        IEnvironment client = EnvironmentFactory.GetInstance();
+
+        public EngagementPage()
 		{
 			InitializeComponent ();
-		}
+            labelClient.Text = client != null ? client.GetEnvName() : "Guest";                        
+            Console.WriteLine(String.Format("client: {0}", client?.ToString()));
+        }
 
         async void OnClicked_Logout(object sender, EventArgs e)
         {
@@ -24,6 +26,5 @@ namespace Test.Pages
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
         }
-
     }
 }

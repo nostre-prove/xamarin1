@@ -2,6 +2,7 @@
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using System;
+using Test.Interfaces;
 using Xamarin.Forms;
 
 namespace Test.Helpers
@@ -10,15 +11,12 @@ namespace Test.Helpers
     {
         public static void Start()
         {
-            IEnvironment myEnv = EnvironmentFactory.getInstance();
-            AppCenter.Start(String.Format("android={0};ios={1};", myEnv.AnalyticsKeyAndroid(), myEnv.AnalyticsKeyIos()),
-                typeof(Analytics), typeof(Crashes));
-            
+            IEnvironment myEnv = EnvironmentFactory.GetInstance();
+            AppCenter.Start(String.Format("android={0};ios={1};", myEnv.GetAnalyticsKeyAndroid(), myEnv.GetAnalyticsKeyIos()),  typeof(Analytics), typeof(Crashes));
         }
 
         public static void Send(string sender, string message)
         {
-            // TODO: change output
             if (Application.Current.Properties.ContainsKey(Constants.USER_NAME) && 1==0)
             {                
                 var username = Application.Current.Properties[Constants.USER_NAME];

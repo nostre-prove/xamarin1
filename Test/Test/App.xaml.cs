@@ -14,24 +14,24 @@ namespace Test
 
 		public App ()
 		{
-            AnalyticsHelper.Start();
+            // AnalyticsHelper.Start();
             SetMainPage();
         }
 
 		protected override void OnStart ()
 		{
-            IEnvironment myEnv = EnvironmentFactory.getInstance();
-            AnalyticsHelper.Send(Constants.APP_NAME, "OnStart");
+            // IEnvironment myEnv = EnvironmentFactory.GetInstance();
+            // AnalyticsHelper.Send(Constants.APP_NAME, "OnStart");
         }
 
 		protected override void OnSleep ()
 		{
-            AnalyticsHelper.Send(Constants.APP_NAME, "OnSleep");
+            // AnalyticsHelper.Send(Constants.APP_NAME, "OnSleep");
         }
 
 		protected override void OnResume ()
 		{
-            AnalyticsHelper.Send(Constants.APP_NAME, "OnResume");
+            // AnalyticsHelper.Send(Constants.APP_NAME, "OnResume");
         }
 
         private void SetMainPage()

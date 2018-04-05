@@ -15,13 +15,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Clients\OpenFiber.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AnalyticsHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Environment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IEnvironment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnvironmentFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OpenFiberTestEnv.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OpenFiberProdEnv.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\OpenFiberTestEnv.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\OpenFiberProdEnv.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILogging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ClientEnvironment.cs" />
@@ -90,5 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Clients\" />
   </ItemGroup>
 </Project>

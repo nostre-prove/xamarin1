@@ -16,32 +16,35 @@ namespace Test.Pages
         {
             InitializeComponent();
             BindingContext = new LoginViewModel();
-            DependencyService.Get<ILogging>().Info("Login", "mymessage");
-            // IsBusy = true;
+            DependencyService.Get<ILogging>().Info("Login", "mymessage");            
         }
-        /*
+        
         protected override void OnAppearing()
         {
             var Environments = new List<String>()
             {
-                "Sviluppo",
-                "Produzione"
+                "OpenFiberProdEnv",
+                "OpenFiberTestEnv"
             };
-            myPicker.ItemsSource = Environments;
+            PickerEnvironment.ItemsSource = Environments;
         }
-        */
-        /*
-        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+        
+        void OnPickerEnvironmentChanged(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;
 
             if (selectedIndex != -1)
             {
-                messageEnvironment.Text = String.Format("Ambiente selezionato: {0}", (string)picker.ItemsSource[selectedIndex]);
+                if(Application.Current.Properties.ContainsKey(Constants.SITE_ID))
+                {
+                    Application.Current.Properties[Constants.SITE_ID] = picker.ItemsSource[selectedIndex];
+                } else
+                {
+                    Application.Current.Properties.Add(Constants.SITE_ID, picker.ItemsSource[selectedIndex]);
+                }
             }
         }
-        */
 
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {

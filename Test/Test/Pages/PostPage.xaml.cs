@@ -21,7 +21,7 @@ namespace Test.Pages
         public PostPage ()
 		{
             InitializeComponent();
-            AnalyticsHelper.Send("Calendar", "Enter in Calendar section");
+            // AnalyticsHelper.Send("Calendar", "Enter in Calendar section")
             countPost.Text = "SQLite";
         }
         

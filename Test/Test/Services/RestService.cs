@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Test.Helpers;
+using Test.Interfaces;
 using Test.Models;
 using Xamarin.Forms;
 
@@ -57,9 +58,9 @@ namespace Test.Services
 
         public static async Task<LoginResponse> DoLogin(string username, string password)
         {
-            IEnvironment myEnv = EnvironmentFactory.getInstance();
-            DependencyService.Get<ILogging>().Info("Selected Environment", myEnv.EnvName());
-            string url = myEnv.EndpointUrl()+ myEnv.LoginUrl();
+            IEnvironment myEnv = EnvironmentFactory.GetInstance();
+            DependencyService.Get<ILogging>().Info("Selected Environment", myEnv.GetEnvName());
+            string url = myEnv.GetEndpointUrl()+ myEnv.GetLoginUrl();
 
             LoginResponse loginResponse = null;           
 
