@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Android", "Test\Test.Android\Test.Android.csproj", "{FC112B9E-286C-474B-B353-7F50EB24F1ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditPlus.Android", "Test\Test.Android\AuditPlus.Android.csproj", "{FC112B9E-286C-474B-B353-7F50EB24F1ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.iOS", "Test\Test.iOS\Test.iOS.csproj", "{30FF7737-BF8E-4DAC-858D-14875DC8ED57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditPlus.iOS", "Test\Test.iOS\AuditPlus.iOS.csproj", "{30FF7737-BF8E-4DAC-858D-14875DC8ED57}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Test", "Test\Test\Test.shproj", "{01D3AD71-5451-485B-8359-17373CC3D694}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AuditPlus", "Test\Test\AuditPlus.shproj", "{01D3AD71-5451-485B-8359-17373CC3D694}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8E44033F-57E0-4B41-821A-E2EE9E92FA1F}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,7 +17,6 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Test\Test\Test.projitems*{01d3ad71-5451-485b-8359-17373cc3d694}*SharedItemsImports = 13
-		Test\Test\Test.projitems*{30ff7737-bf8e-4dac-858d-14875dc8ed57}*SharedItemsImports = 4
 		Test\Test\Test.projitems*{fc112b9e-286c-474b-b353-7f50eb24f1ed}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

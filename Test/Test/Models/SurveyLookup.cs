@@ -1,4 +1,4 @@
-﻿namespace Test.Models
+﻿namespace AuditPlus.Models
 {
     public class SurveyLookup
     {

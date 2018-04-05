@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Test.Helpers;
+using AuditPlus.Helpers;
 using Xamarin.Forms;
 
-namespace Test.Services
+namespace AuditPlus.Services
 {
     static class LoginService
     {

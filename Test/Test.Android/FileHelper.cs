@@ -1,10 +1,10 @@
 ﻿using System.IO;
-using Test.Droid;
-using Test.Interfaces;
+using AuditPlus.Droid;
+using AuditPlus.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Test.Droid
+namespace AuditPlus.Droid
 {
     public class FileHelper : IFileHelper
     {

@@ -1,8 +1,9 @@
-﻿namespace Test.Helpers
+﻿namespace AuditPlus.Helpers
 {
     public static class Constants
     {
         public const int NUMBER_VERSION = 1;
+        public const string APP_NAME = "Audit+";
 
         // controls flag
         public const bool ENVIRONMENT_SELECTOR = true;

@@ -1,13 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Test.Models;
-using Test.Services;
+using AuditPlus.Models;
+using AuditPlus.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Test.Pages
+namespace AuditPlus.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SurveyPage : ContentPage

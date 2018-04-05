@@ -3,8 +3,8 @@ using System;
 using System.IO;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Test.Droid.LoggingDependency))]
-namespace Test.Droid
+[assembly: Dependency(typeof(AuditPlus.Droid.LoggingDependency))]
+namespace AuditPlus.Droid
 {
     public class LoggingDependency : ILogging
     {

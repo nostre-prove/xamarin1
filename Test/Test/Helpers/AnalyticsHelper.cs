@@ -2,17 +2,17 @@
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using System;
-using Test.Interfaces;
+using AuditPlus.Interfaces;
 using Xamarin.Forms;
 
-namespace Test.Helpers
+namespace AuditPlus.Helpers
 {
     static class AnalyticsHelper
     {
         public static void Start()
         {
             IEnvironment myEnv = EnvironmentFactory.GetInstance();
-            AppCenter.Start(String.Format("android={0};ios={1};", myEnv.GetAnalyticsKeyAndroid(), myEnv.GetAnalyticsKeyIos()),  typeof(Analytics), typeof(Crashes));
+            AppCenter.Start(String.Format("android={0};ios={1};", myEnv?.GetAnalyticsKeyAndroid(), myEnv?.GetAnalyticsKeyIos()),  typeof(Analytics), typeof(Crashes));
         }
 
         public static void Send(string sender, string message)

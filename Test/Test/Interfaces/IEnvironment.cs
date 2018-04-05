@@ -1,4 +1,4 @@
-﻿namespace Test.Interfaces
+﻿namespace AuditPlus.Interfaces
 {
     public interface IEnvironment
     {

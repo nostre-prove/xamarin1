@@ -6,8 +6,8 @@
     <ProjectGuid>{FC112B9E-286C-474B-B353-7F50EB24F1ED}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Test.Droid</RootNamespace>
-    <AssemblyName>Test.Android</AssemblyName>
+    <RootNamespace>AuditPlus.Droid</RootNamespace>
+    <AssemblyName>AuditPlus.Android</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>

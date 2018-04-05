@@ -1,17 +1,16 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Helpers;
-using Test.Interfaces;
-using Test.Models;
+using AuditPlus.Helpers;
+using AuditPlus.Interfaces;
+using AuditPlus.Models;
 using Xamarin.Forms;
 
-namespace Test.Services
+namespace AuditPlus.Services
 {
     static class RestService
     {
@@ -23,7 +22,7 @@ namespace Test.Services
             var content = await httpClient.GetStringAsync(url);
             return content;
         }
-
+        /*
         public static async Task<OauthAccess> DoLoginIsmael(string username, string password)
         {
             OauthAccess oauthAccess = null;
@@ -55,7 +54,7 @@ namespace Test.Services
 
             return oauthAccess;
         }
-
+        */
         public static async Task<LoginResponse> DoLogin(string username, string password)
         {
             IEnvironment myEnv = EnvironmentFactory.GetInstance();

@@ -1,16 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using AuditPlus.Models;
+using AuditPlus.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Test.Helpers;
-using Test.Models;
-using Test.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Test.Pages
+namespace AuditPlus.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PostPage : ContentPage

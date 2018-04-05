@@ -1,12 +1,12 @@
-﻿using Test.Helpers;
-using Test.Interfaces;
-using Test.Pages;
-using Test.Services;
+﻿using AuditPlus.Helpers;
+using AuditPlus.Interfaces;
+using AuditPlus.Pages;
+using AuditPlus.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Test
+namespace AuditPlus
 {
     public partial class App : Application
 	{
@@ -14,24 +14,24 @@ namespace Test
 
 		public App ()
 		{
-            // AnalyticsHelper.Start();
+            AnalyticsHelper.Start();
             SetMainPage();
         }
 
 		protected override void OnStart ()
 		{
             // IEnvironment myEnv = EnvironmentFactory.GetInstance();
-            // AnalyticsHelper.Send(Constants.APP_NAME, "OnStart");
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnStart");
         }
 
 		protected override void OnSleep ()
 		{
-            // AnalyticsHelper.Send(Constants.APP_NAME, "OnSleep");
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnSleep");
         }
 
 		protected override void OnResume ()
 		{
-            // AnalyticsHelper.Send(Constants.APP_NAME, "OnResume");
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnResume");
         }
 
         private void SetMainPage()

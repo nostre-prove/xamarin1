@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Test.Models
+namespace AuditPlus.Models
 {
     public class Post
     {

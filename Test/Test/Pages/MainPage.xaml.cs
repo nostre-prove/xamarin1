@@ -1,10 +1,10 @@
 ﻿using System;
-using Test.Helpers;
-using Test.Services;
+using AuditPlus.Helpers;
+using AuditPlus.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Test.Pages
+namespace AuditPlus.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage

@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Test.iOS
+namespace AuditPlus.iOS
 {
     public class Application
     {

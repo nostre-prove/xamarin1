@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Test.Helpers;
-using Test.Services;
-using Test.ViewModels;
+using AuditPlus.Helpers;
+using AuditPlus.Services;
+using AuditPlus.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Test.Pages
+namespace AuditPlus.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage, INotifyPropertyChanged

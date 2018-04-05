@@ -1,6 +1,6 @@
-﻿using Test.Helpers;
+﻿using AuditPlus.Helpers;
 
-namespace Test.ViewModels
+namespace AuditPlus.ViewModels
 {
     class LoginViewModel
     {

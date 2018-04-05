@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test.Interfaces
+namespace AuditPlus.Interfaces
 {
     public interface IFileHelper
     {
