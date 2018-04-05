@@ -76,5 +76,12 @@ namespace Test.Pages
                 DependencyService.Get<ILogging>().Info("Test.PostPage", ex.ToString());
             }
         }
+
+        async void OnClicked_Logout(object sender, EventArgs e)
+        {
+            LoginService.RemoveUserInfo();
+            Navigation.InsertPageBefore(new LoginPage(), this);
+            await Navigation.PopAsync();
+        }
     }
 }

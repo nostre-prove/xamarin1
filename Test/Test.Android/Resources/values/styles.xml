@@ -14,13 +14,13 @@
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#FFFFFF</item>
+    <item name="colorPrimary">@color/White</item>
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">#FE6E37</item>
+    <item name="colorPrimaryDark">@color/DbaOrange</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!-- <item name="colorAccent">#FF4081</item>-->
-    <item name="colorAccent">#FE6E37</item>
+    <item name="colorAccent">@color/DbaOrange</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
@@ -30,6 +30,11 @@
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
   
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+    <!-- android:textColorSecondary is the color of the menu overflow icon (three vertical dots) -->
+    <item name="android:textColorPrimary">@color/DbaOrange</item>
+    <item name="android:textColorSecondary">@color/DbaOrange</item>
+    <item name="actionMenuTextColor">@color/DbaOrange</item>
   </style>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
@@ -38,11 +43,7 @@
 
   <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>
-    <item name="color">#FE6E37</item>
+    <item name="color">@color/DbaOrange</item>
   </style>
 
-  <style name="AppToolbarTheme" parent="Theme.AppCompat.NoActionBar">
-    <item name="android:colorBackground">#FF0000</item>
-    <item name="android:textColor">#000080</item>
-  </style>
 </resources>

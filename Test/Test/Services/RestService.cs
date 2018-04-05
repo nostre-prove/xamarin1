@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Test.Helpers;
 using Test.Models;
 using Xamarin.Forms;
 
@@ -56,8 +57,11 @@ namespace Test.Services
 
         public static async Task<LoginResponse> DoLogin(string username, string password)
         {
-            LoginResponse loginResponse = null;
-            string url = "http://ws-mobile-connector-dba.appspot.com/userLoginServlet?servletAction=login";
+            IEnvironment myEnv = EnvironmentFactory.getInstance();
+            DependencyService.Get<ILogging>().Info("Selected Environment", myEnv.EnvName());
+            string url = myEnv.EndpointUrl()+ myEnv.LoginUrl();
+
+            LoginResponse loginResponse = null;           
 
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

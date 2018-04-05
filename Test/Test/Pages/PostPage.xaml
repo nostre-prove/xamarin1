@@ -5,7 +5,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#1F9BE3"/>
+                <Setter Property="BackgroundColor" Value="#FE6E37"/>
                 <Setter Property="BorderWidth" Value="0"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="FontFamily" Value="Droid Sans Mono" />
@@ -15,14 +15,19 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Logout" Clicked="OnClicked_Logout"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
 
         <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
             <Label x:Name="countPost" FontSize="Large"></Label>
-            <Button Text="Aggiungi dati" Style="{StaticResource buttonStyle}" Clicked="LoadDataFromService"></Button>
-            <Button Text="Elimina tutti i dati" Style="{StaticResource buttonStyle}" Clicked="DeleteAllPosts"></Button>
-            <Button Text="Mostra dati locali" Style="{StaticResource buttonStyle}" Clicked="LoadDataInternal"></Button>
+            
+            <Button Text="Aggiungi dati" Style="{StaticResource buttonStyle}" Clicked="LoadDataFromService" ></Button>
+            <Button Text="Elimina tutti i dati" Style="{StaticResource buttonStyle}" Clicked="DeleteAllPosts" ></Button>
+            <Button Text="Mostra dati locali" Style="{StaticResource buttonStyle}" Clicked="LoadDataInternal" ></Button>
 
             <ListView x:Name="Posts">
                 <ListView.ItemTemplate>

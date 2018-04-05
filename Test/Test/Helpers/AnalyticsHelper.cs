@@ -10,8 +10,10 @@ namespace Test.Helpers
     {
         public static void Start()
         {
-            AppCenter.Start(String.Format("android={0};ios={1};", Constants.ANALYTICS_KEY_ANDROID, Constants.ANALYTICS_KEY_IOS),
+            IEnvironment myEnv = EnvironmentFactory.getInstance();
+            AppCenter.Start(String.Format("android={0};ios={1};", myEnv.AnalyticsKeyAndroid(), myEnv.AnalyticsKeyIos()),
                 typeof(Analytics), typeof(Crashes));
+            
         }
 
         public static void Send(string sender, string message)

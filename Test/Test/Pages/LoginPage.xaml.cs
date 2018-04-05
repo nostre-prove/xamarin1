@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Test.Helpers;
 using Test.Services;
 using Test.ViewModels;
 using Xamarin.Forms;

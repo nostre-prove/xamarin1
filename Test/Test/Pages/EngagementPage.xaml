@@ -4,7 +4,7 @@
              x:Class="Test.Pages.EngagementPage" BackgroundColor="#F4F4F4">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Secondary" Text="Logout" Clicked="OnClicked_Logout"/>
+        <ToolbarItem Order="Primary" Text="Logout" Clicked="OnClicked_Logout"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

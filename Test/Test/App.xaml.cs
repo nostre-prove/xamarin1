@@ -20,17 +20,18 @@ namespace Test
 
 		protected override void OnStart ()
 		{
-            AnalyticsHelper.Send("App", "Start application");
+            IEnvironment myEnv = EnvironmentFactory.getInstance();
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnStart");
         }
 
 		protected override void OnSleep ()
 		{
-            AnalyticsHelper.Send("App", "OnSleep application");
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnSleep");
         }
 
 		protected override void OnResume ()
 		{
-            AnalyticsHelper.Send("App", "OnResume application");
+            AnalyticsHelper.Send(Constants.APP_NAME, "OnResume");
         }
 
         private void SetMainPage()

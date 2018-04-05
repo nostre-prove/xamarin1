@@ -15,10 +15,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\OpenFiber.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AnalyticsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Environment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnvironmentFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OpenFiberTestEnv.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OpenFiberProdEnv.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILogging.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ClientEnvironment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LoginResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OauthAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SurveyGroup.cs" />
@@ -83,6 +89,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Assets\Img\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Test.Models;
+using Test.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -72,6 +73,13 @@ namespace Test.Pages
             var index = SurveyGroupTest.IndexOf(SelectedSurveyGroup);
             SurveyGroupTest.Remove(SelectedSurveyGroup);
             SurveyGroupTest.Insert(index, SelectedSurveyGroup);
+        }
+
+        async void OnClicked_Logout(object sender, EventArgs e)
+        {
+            LoginService.RemoveUserInfo();
+            Navigation.InsertPageBefore(new LoginPage(), this);
+            await Navigation.PopAsync();
         }
     }
 }
